@@ -44,13 +44,13 @@ public class CitationProcess implements PushToInterface {
 	    }
         if (pushToService.equals("BibTeX"))
             toFormat = "bibtex";
+        
 
-
-        String exportCitationsURL;
+        String citeroUrl;
         if(service)
-            exportCitationsURL = "http://citero.herokuapp.com/export_service";
+            citeroUrl = "http://citero.herokuapp.com/export_service";
         else
-            exportCitationsURL = "http://citero.herokuapp.com/export";
+            citeroUrl = "http://citero.herokuapp.com/export";
 
         String form = "<!DOCTYPE html>"
                 +"<html>"
@@ -64,7 +64,7 @@ public class CitationProcess implements PushToInterface {
                 +"</head>"
                 +"<body>"
                 +"<div class=\"no_js\"><div class=\"inner_form_dialog\">"
-                +"  <form id=\"\" action=\""+exportCitationsURL+"\" method=\"POST\" class=\"external_form\" enctype=\"application/x-www-form-urlencoded\">"
+                +"  <form id=\"\" action=\""+citeroUrl+"\" method=\"POST\" class=\"external_form\" enctype=\"application/x-www-form-urlencoded\">"
                 +"      <h2>Push to "+ pushToService +"</h2>"
                 +"      <div class=\"formError\">"
                 +"      </div>"
