@@ -44,13 +44,13 @@ public class CitationProcess implements PushToInterface {
 	    }
         if (pushToService.equals("BibTeX"))
             toFormat = "bibtex";
-        
+
 
         String exportCitationsURL;
         if(service)
-            exportCitationsURL = "http://export-citations.herokuapp.com/export_service";
+            exportCitationsURL = "http://citero.herokuapp.com/export_service";
         else
-            exportCitationsURL = "http://export-citations.herokuapp.com/export";
+            exportCitationsURL = "http://citero.herokuapp.com/export";
 
         String form = "<!DOCTYPE html>"
                 +"<html>"
