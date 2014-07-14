@@ -14,7 +14,7 @@ default_run_options[:shell] = '/bin/bash --login'
 set :repository,  "git@github.com:NYULibraries/#{application}.git"
 set :scm, :git
 #Source code management username
-set :scm_username, ""
+set :scm_username, ENV['SCM_USERNAME']
 set :deploy_via, :remote_cache
 set :deploy_to, "/exlibris/primo/p4_1/ng/primo/home/profile/search/pushTo.v4"
 
