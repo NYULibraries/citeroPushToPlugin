@@ -11,7 +11,7 @@ set :javac, ENV['JAVAC']
 default_run_options[:shell] = '/bin/bash --login'
 
 # Git variables
-set :repository,  "git@github.com:NYULibraries/citationPushToPlugin.git"
+set :repository,  "git@github.com:NYULibraries/#{application}.git"
 set :scm, :git
 #Source code management username
 set :scm_username, ""
