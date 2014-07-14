@@ -83,9 +83,11 @@ namespace :deploy do
     run "cp -f #{deploy_to}/library/CitationProcess.class /exlibris/primo/p4_1/ng/primo/home/system/tomcat/search/webapps/primo_library#libweb/WEB-INF/classes/edu/nyu/library/"
 
     run "mv #{deploy_to}/library/CitationProcess.java #{deploy_to}"
-    run "rm -rf #{deploy_to}/library"
-    run "rm -rf #{deploy_to}/releases"
-    run "rm -rf #{deploy_to}/shared"
+    #run "rm -rf #{deploy_to}/library"
+    #run "rm -rf #{deploy_to}/releases"
+    #run "rm -rf #{deploy_to}/shared"
+    
+    run "cat #{deploy_to}/library/CitationProcess.java"
     run "echo \"All done\""
     cleanup
   end
