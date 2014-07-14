@@ -15,6 +15,7 @@ GIT
       rvm-capistrano (~> 1.5.0)
 
 GEM
+  remote: https://rubygems.org/
   specs:
     cap_git_tools (0.9.1)
       capistrano (~> 2.0)
@@ -65,6 +66,7 @@ DEPENDENCIES
   cap_git_tools
   capistrano
   debugger
+  figs
   git
   mail
   newrelic_rpm

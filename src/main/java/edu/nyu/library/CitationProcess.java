@@ -44,14 +44,9 @@ public class CitationProcess implements PushToInterface {
 	    }
         if (pushToService.equals("BibTeX"))
             toFormat = "bibtex";
-        
 
-        String citeroUrl;
-        if(service)
-            citeroUrl = "http://citero.herokuapp.com/export_service";
-        else
-            citeroUrl = "http://citero.herokuapp.com/export";
 
+        String citeroUrl = "https://web2.library.nyu.edu/export_citations/export_citations"
         String form = "<!DOCTYPE html>"
                 +"<html>"
                 +"<head>"
@@ -71,7 +66,7 @@ public class CitationProcess implements PushToInterface {
                 +"      <fieldset>"
                 +"          <legend></legend>"
                 +"          <textarea type=\"hidden\" name=\"from_format\" id=\"from_format\">PNX</textarea>"
-                +"          <textarea type=\"hidden\" name=\"" +((service) ? "to_service" : "to_format" )+"\" id=\"to_format\">"+toFormat+"</textarea>"
+                +"          <textarea type=\"hidden\" name=\"to_format\" id=\"to_format\">"+toFormat+"</textarea>"
                 +"          <textarea name=\"data\" id=\"data\">"
                 + sw.toString()
                 +"          </textarea>"

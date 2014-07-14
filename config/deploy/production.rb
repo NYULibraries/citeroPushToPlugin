@@ -1,5 +1,5 @@
 require 'figs'
-Figs.load(stage: "staging")
+Figs.load(stage: "production")
 Figs.env.deploy_servers.each do |srvr|
   server srvr, :app, :web
 end

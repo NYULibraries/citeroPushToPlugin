@@ -1,5 +1,7 @@
 # Call with cap -S branch="<branch-name>" [staging|production] deploy
+require 'figs'
 require 'capistrano/ext/multistage'
+
 
 set :ssh_options, {:forward_agent => true}
 set :application, "citeroPushToPlugin"
@@ -7,7 +9,7 @@ set :application, "citeroPushToPlugin"
 set :user, ENV['USER']
 # Your javacompiler
 set :javac, ENV['JAVAC']
-
+# set(:servers)       { Figs.deploy_servers }
 default_run_options[:shell] = '/bin/bash --login'
 
 # Git variables
@@ -86,7 +88,7 @@ namespace :deploy do
     run "rm -rf #{deploy_to}/library"
     run "rm -rf #{deploy_to}/releases"
     run "rm -rf #{deploy_to}/shared"
-    
+
     run "echo \"All done\""
     cleanup
   end
