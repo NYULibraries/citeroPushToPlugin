@@ -46,7 +46,7 @@ public class CitationProcess implements PushToInterface {
             toFormat = "bibtex";
 
 
-        String citeroUrl = "https://web2.library.nyu.edu/export_citations/export_citations"
+        String citeroUrl = "https://web2.library.nyu.edu/export_citations/export_citations";
         String form = "<!DOCTYPE html>"
                 +"<html>"
                 +"<head>"
