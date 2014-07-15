@@ -39,7 +39,7 @@ public class CitationProcess implements PushToInterface {
             service = true;
         }
         if (pushToService.equals("EasyBIB")){
-            toFormat = "easybib";
+            toFormat = "easybibpush";
             service = true;
 	    }
         if (pushToService.equals("BibTeX"))
