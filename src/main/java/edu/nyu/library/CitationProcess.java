@@ -52,6 +52,7 @@ public class CitationProcess implements PushToInterface {
                 +"<head>"
                 +"  <title>Citero</title>"
                 +"  <script type=\"text/javascript\">"
+                +"      document.getElementsByClassName(\"no_js\")[0].style.visibility = 'hidden';"
                 +"      window.onload=function(){"
                 +"          document.getElementById(\"submit\").click();"
                 +"      }"
