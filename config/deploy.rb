@@ -64,7 +64,9 @@ namespace :deploy do
     run "rvm use 1.9.3"
     run "mkdir -p #{deploy_to}/library"
     run "cp -f #{latest_release}/src/main/java/edu/nyu/library/Citation* #{deploy_to}/library"
+    run "ls -la #{latest_release}/*.jar"
     run "cp -f #{latest_release}/*.jar #{deploy_to}/library"
+    run "ls -la #{deploy_to}/library/*.jar"
 
     classpath = "/exlibris/app/oracle/product/112/jdbc/lib/classes12.jar"
     classpath = "#{classpath}:/exlibris/primo/p4_1/ng/primo/home/system/thirdparty/jbossas/server/search/deploy/primo_library-app.ear/primo_library-libweb.war/WEB-INF/classes"
