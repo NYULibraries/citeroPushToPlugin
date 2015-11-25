@@ -61,7 +61,7 @@ namespace :deploy do
     run "chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
     copy_latest_release
     # Compile the distribution assets
-    run "rvm use 1.9.3"
+    run "rvm use 2.2.1"
     run "mkdir -p #{deploy_to}/library"
     run "cp -f #{latest_release}/src/main/java/edu/nyu/library/Citation* #{deploy_to}/library"
     run "cp -f #{latest_release}/primo* #{deploy_to}/library"
